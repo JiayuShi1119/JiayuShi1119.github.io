@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/portrait-home.jpg">
-  <link rel="stylesheet" href="assets/css/style.css?v=6">
+  <link rel="stylesheet" href="assets/css/style.css?v=7">
   <script>document.documentElement.classList.remove('no-js');</script>
 </head>
 <body>
@@ -76,19 +76,17 @@
 
 <main id="main">
 
-<!-- ===================== HERO / HOME ===================== -->
-<section class="hero" id="home">
+<!-- ===================== HOME (hero + explore) ===================== -->
+<div class="page" id="home" data-title="Home">
+<section class="hero">
   <div class="container hero-grid">
     <div>
       <div class="tagline">&gt; Electrical Engineering @ Georgia Tech_</div>
       <h1>Jiayu Shi <span class="nick">(Joey)</span></h1>
       <p class="lead">
-        Welcome! I am an Electrical Engineering undergraduate at the <strong>Georgia Institute of Technology</strong>,
-        focusing on the <strong>Circuit Technology</strong> and <strong>Robotics &amp; Autonomous Systems</strong> threads.
-        I build hardware from the ground up&mdash;from a custom dual-extruder 3D printer for light-driven soft robots
-        to a 4-layer RP2040 sensor board for the RoboJackets RoboCup team.
-        I am seeking a <strong>Summer 2027 hardware engineering internship</strong> where rigorous circuit design
-        and proven team leadership can make a real impact.
+        Welcome! I&rsquo;m an Electrical Engineering student at <strong>Georgia Tech</strong>. I love building hardware
+        from scratch&mdash;circuit boards, the code that runs on them, and even a custom 3D printer that makes tiny robots
+        jump when light hits them. I&rsquo;m looking for a <strong>Summer 2027 hardware engineering internship</strong>.
       </p>
       <div class="hero-badges">
         <span class="badge"><span class="dot"></span>Open to Summer 2027 Internships</span>
@@ -110,47 +108,72 @@
   </div>
   <div class="container">
     <div class="hero-stats" role="list">
-      <div role="listitem"><b>3.82 / 4.0</b><span>GPA at Sichuan University (SCUPI) before transfer</span></div>
-      <div role="listitem"><b>4-Layer</b><span>RP2040 sensor PCB designed for RoboJackets</span></div>
-      <div role="listitem"><b>820&times;</b><span>Thrust-to-weight ratio of our printed photo-actuator</span></div>
+      <div role="listitem"><b>3.82 / 4.0</b><span>GPA before transferring to Georgia Tech</span></div>
+      <div role="listitem"><b>4-Layer</b><span>Circuit board designed for the RoboJackets robot soccer team</span></div>
+      <div role="listitem"><b>10&times;</b><span>How high our printed robot jumps, compared with its body length</span></div>
       <div role="listitem"><b>55</b><span>Members led as Student Council President</span></div>
     </div>
   </div>
 </section>
 
+<section class="explore" aria-labelledby="explore-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Start here</span>
+      <h2 id="explore-title">Explore my portfolio</h2>
+      <p>Each page is short and focused. Pick one to dive in.</p>
+    </div>
+
+    <a class="explore-feature" href="#discovery">
+      <img src="assets/img/diw-printer-front.jpg" loading="lazy" width="1050" height="1400" alt="Front view of the custom two-nozzle 3D printer with twin syringes above a heated aluminum bed">
+      <div class="txt">
+        <span class="k">&#9733; Featured &middot; Discovery Project</span>
+        <h3>A 3D printer that makes light-powered jumping robots</h3>
+        <p>Our team built a two-nozzle 3D printer from scratch so we could print tiny soft robots that leap up to 10 times their own length when UV light hits them.</p>
+        <span class="go">Read the full story <svg><use href="#i-arrow"/></svg></span>
+      </div>
+    </a>
+
+    <div class="explore-grid">
+      <a class="explore-card" href="#about"><span class="ico"><svg><use href="#i-users"/></svg></span><h3>About Me</h3><p>How a curiosity about moving things led me to circuits.</p><span class="go">Open <svg><use href="#i-arrow"/></svg></span></a>
+      <a class="explore-card" href="#resume"><span class="ico"><svg><use href="#i-brief"/></svg></span><h3>Resume</h3><p>My education and experience at a glance, plus the PDF.</p><span class="go">Open <svg><use href="#i-arrow"/></svg></span></a>
+      <a class="explore-card" href="#career"><span class="ico"><svg><use href="#i-target"/></svg></span><h3>Career Goals</h3><p>Where I&rsquo;m headed and my step-by-step plan to get there.</p><span class="go">Open <svg><use href="#i-arrow"/></svg></span></a>
+      <a class="explore-card" href="#projects"><span class="ico"><svg><use href="#i-chip"/></svg></span><h3>Projects</h3><p>Quick summaries of what I&rsquo;ve built. Click any one for details.</p><span class="go">Open <svg><use href="#i-arrow"/></svg></span></a>
+      <a class="explore-card" href="#skills"><span class="ico"><svg><use href="#i-gear"/></svg></span><h3>Skills &amp; Experience</h3><p>The tools I use, my internship, and the teams I&rsquo;ve led.</p><span class="go">Open <svg><use href="#i-arrow"/></svg></span></a>
+      <a class="explore-card" href="#beyond"><span class="ico"><svg><use href="#i-music"/></svg></span><h3>Beyond the Lab</h3><p>Guitar, cycling, and travel.</p><span class="go">Open <svg><use href="#i-arrow"/></svg></span></a>
+    </div>
+  </div>
+</section>
+</div>
+
 <!-- ===================== ABOUT ===================== -->
-<section id="about">
+<section id="about" class="page" data-title="About Me">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">About Me</span>
-      <h2>Engineering where hardware, firmware, and materials meet</h2>
-      <p>A short story of how a curiosity about moving matter turned into a career in circuits.</p>
+      <h2>Where electronics meet the physical world</h2>
+      <p>How a curiosity about moving things turned into a career in circuits.</p>
     </div>
     <div class="about-grid">
       <div class="about-text reveal">
         <p>
-          My path into Electrical Engineering began with a simple question: how do physical materials and electronic
-          signals work together to create intelligent motion? I started my undergraduate studies in Materials Science
-          and Engineering at the Sichuan University&ndash;Pittsburgh Institute (SCUPI) before moving into Electrical and
-          Computer Engineering, where I earned a <strong>3.82/4.0 GPA</strong>. That cross-disciplinary start shapes how I
-          think today. I do not see a circuit as an isolated schematic; I see it as the nervous system that brings a
-          mechanism, a sensor, or a functional material to life.
+          My path into Electrical Engineering began with a simple question: how can materials and electronics work
+          together to make things move? I started in Materials Science and Engineering at the Sichuan
+          University&ndash;Pittsburgh Institute (SCUPI), then switched to Electrical and Computer Engineering and earned a
+          <strong>3.82/4.0 GPA</strong>. Because of that start, I see a circuit as the nervous system that brings a machine,
+          a sensor, or a smart material to life.
         </p>
         <p>
-          I am happiest when I solve problems from first principles. I have written register-level ARM Cortex-M4 assembly
-          without a hardware abstraction layer, laid out multi-layer PCBs in KiCad, and rebuilt the motion-control
-          hardware of a 3D printer so that it could extrude experimental inks. During my internship at
-          <strong>Shenzhen Bestsoon Electronic Technology</strong>, I learned how precision semiconductor equipment such as
-          the ASMPT AD8312PIUS die bonder is operated, calibrated, and maintained on a real production floor. In Fall 2026 I
-          transferred to Georgia Tech, where I joined the <strong>RoboJackets RoboCup Electrical Team</strong> and continue
-          to grow as a hardware designer.
+          I like solving problems from the ground up. I have programmed microcontrollers at the lowest level, designed
+          multi-layer circuit boards, and rebuilt a 3D printer so it could print experimental materials. During a summer
+          internship at <strong>Shenzhen Bestsoon Electronic Technology</strong>, I learned how chip-assembly machines are run
+          and maintained on a real factory floor. Since transferring to Georgia Tech in Fall 2026, I have been designing
+          circuit boards for the <strong>RoboJackets</strong> robot soccer team.
         </p>
         <p>
-          I also believe that great engineering depends on clear communication and trust. As <strong>President of the SCUPI
-          Student Council</strong>, I led a 55-member organization, managed a $12,000 annual budget, and turned 313 pieces of
-          student feedback into concrete campus improvements. Away from the workbench, you will find me studying the
-          acoustics of handmade guitars or riding long gravel routes outside Atlanta. Each of these pursuits reminds me that
-          careful measurement, patience, and good teamwork lead to the best results.
+          Good engineering also depends on people. As <strong>President of the SCUPI Student Council</strong>, I led 55
+          members, managed a $12,000 annual budget, and turned 313 pieces of student feedback into real campus changes.
+          Outside the lab, I play guitar and ride long gravel routes around Atlanta.
         </p>
       </div>
       <aside class="reveal">
@@ -158,7 +181,7 @@
           <li><span class="k">Major</span><span class="v">B.S. Electrical Engineering, Georgia Tech</span></li>
           <li><span class="k">Threads</span><span class="v">Circuit Technology &middot; Robotics &amp; Autonomous Systems</span></li>
           <li><span class="k">Graduation</span><span class="v">Expected May 2028</span></li>
-          <li><span class="k">Focus</span><span class="v">Analog/mixed-signal hardware, PCB design, embedded firmware</span></li>
+          <li><span class="k">Focus</span><span class="v">Circuit boards, analog hardware, and embedded code</span></li>
           <li><span class="k">Teams</span><span class="v">RoboJackets RoboCup (Electrical)</span></li>
           <li><span class="k">Languages</span><span class="v">English (Fluent) &middot; Mandarin (Native)</span></li>
         </ul>
@@ -173,7 +196,7 @@
 </section>
 
 <!-- ===================== RESUME ===================== -->
-<section id="resume" class="alt">
+<section id="resume" class="page alt" data-title="Resume">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Resume</span>
@@ -209,24 +232,24 @@
             <div class="entry-top"><h4>Shenzhen Bestsoon Electronic Technology Co., Ltd.</h4><span class="when">Jul &ndash; Aug 2026</span></div>
             <div class="role">Technical Department Intern &middot; Shenzhen, China</div>
             <ul>
-              <li>Learned the structure, working principles, operation, and maintenance of the ASMPT AD8312PIUS die bonder.</li>
+              <li>Learned how a high-speed die bonder (a machine that places chips into their packages) is operated and maintained.</li>
               <li>Applied circuit and engineering coursework to technical assignments alongside the department team.</li>
             </ul>
           </div>
           <div class="entry">
             <div class="entry-top"><h4>RoboJackets &ndash; RoboCup Electrical Team</h4><span class="when">Fall 2026 &ndash; Present</span></div>
             <div class="role">Electrical Hardware Designer &middot; Georgia Tech</div>
-            <ul><li>Designed a 4-layer, daisy-chainable RP2040 sensor board with six I&sup2;C peripherals in KiCad.</li></ul>
+            <ul><li>Designed a 4-layer sensor circuit board with six on-board sensors and chips in KiCad.</li></ul>
           </div>
           <div class="entry">
-            <div class="entry-top"><h4>DIW 3D Printing &amp; Photo-Responsive Materials</h4><span class="when">Mar 2025 &ndash; Present</span></div>
+            <div class="entry-top"><h4>Custom 3D Printer for Light-Powered Soft Robots</h4><span class="when">Mar 2025 &ndash; Present</span></div>
             <div class="role">Project Leader &middot; Provincial Innovation Training Program</div>
-            <ul><li>Built a dual-extruder Direct Ink Writing printer and gradient slicer software; led a five-person, four-discipline team.</li></ul>
+            <ul><li>Built a two-nozzle 3D printer and its slicing software; led a five-person team from four majors.</li></ul>
           </div>
           <div class="entry">
             <div class="entry-top"><h4>STM32 Embedded Systems Development</h4><span class="when">Mar &ndash; Jul 2026</span></div>
             <div class="role">Project Leader</div>
-            <ul><li>Programmed STM32L476 MCUs in C and ARM assembly with register-level peripherals, interrupts, and I&sup2;C.</li></ul>
+            <ul><li>Programmed STM32 microcontrollers directly in C and assembly to control keypads, motors, and sensors.</li></ul>
           </div>
         </div>
 
@@ -259,7 +282,7 @@
 </section>
 
 <!-- ===================== CAREER GOALS ===================== -->
-<section id="career">
+<section id="career" class="page" data-title="Career Goals">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Career Goals</span>
@@ -270,12 +293,11 @@
     <div class="north-star reveal">
       <div class="icon"><svg><use href="#i-target"/></svg></div>
       <div>
-        <h3>Long-term goal: Analog &amp; Mixed-Signal Hardware Engineer</h3>
+        <h3>Long-term goal: Analog Hardware Engineer</h3>
         <p>
-          I aim to become an analog hardware engineer and, eventually, a hardware system architect in the semiconductor,
-          robotics, or consumer electronics industry. I want to specialize in precision analog front-ends, sensor interfaces,
-          and high-reliability mixed-signal PCB systems&mdash;the hardware that turns noisy physical signals into data that
-          machines can trust.
+          I want to become an analog hardware engineer: someone who designs the circuits that turn real-world signals like
+          sound, light, and motion into clean data a computer can trust. I&rsquo;m aiming for the semiconductor, robotics, or
+          consumer electronics industry, and in the long run I hope to lead the design of complete hardware systems.
         </p>
       </div>
     </div>
@@ -287,9 +309,9 @@
           <span class="phase">2024 &ndash; 2026</span>
           <h3>Build the foundation at SCUPI <span class="status ok">Done</span></h3>
           <ul class="steps">
-            <li class="done"><svg><use href="#i-check"/></svg><span>Completed core circuits, microelectronics, and embedded processors coursework with a 3.82/4.0 GPA.</span></li>
-            <li class="done"><svg><use href="#i-check"/></svg><span>Led a provincial-level research project that produced a custom DIW 3D printer and gradient slicer software.</span></li>
-            <li class="done"><svg><use href="#i-check"/></svg><span>Completed a technical internship with semiconductor die-bonding equipment and transferred to Georgia Tech.</span></li>
+            <li class="done"><svg><use href="#i-check"/></svg><span>Completed core courses in circuits, electronics, and microcontrollers with a 3.82/4.0 GPA.</span></li>
+            <li class="done"><svg><use href="#i-check"/></svg><span>Led a research project that produced a custom 3D printer and its own slicing software.</span></li>
+            <li class="done"><svg><use href="#i-check"/></svg><span>Completed an internship working with chip-assembly machines, then transferred to Georgia Tech.</span></li>
           </ul>
         </div>
       </li>
@@ -300,8 +322,8 @@
           <h3>Master the fundamentals and join hardware teams <span class="status go">Now</span></h3>
           <ul class="steps">
             <li><svg><use href="#i-dot"/></svg><span><strong>Academics:</strong> excel in Georgia Tech core courses such as <code>ECE 2035</code>, <code>ECE 2031</code>, <code>ECE 3040</code>, and <code>ECE 3084</code> while keeping my GPA above 3.5.</span></li>
-            <li><svg><use href="#i-dot"/></svg><span><strong>RoboJackets:</strong> take full ownership of schematic capture, 4-layer layout, and I&sup2;C bring-up for a RoboCup sensor sub-system.</span></li>
-            <li><svg><use href="#i-dot"/></svg><span><strong>Research:</strong> join a Vertically Integrated Projects (VIP) team focused on embedded sensor systems to strengthen system-level integration skills.</span></li>
+            <li><svg><use href="#i-dot"/></svg><span><strong>RoboJackets:</strong> design, build, and test a sensor board for the team&rsquo;s soccer robots from start to finish.</span></li>
+            <li><svg><use href="#i-dot"/></svg><span><strong>Research:</strong> join a Vertically Integrated Projects (VIP) research team working on sensor systems.</span></li>
           </ul>
         </div>
       </li>
@@ -311,7 +333,7 @@
           <span class="phase">Summer 2027 &ndash; 2028</span>
           <h3>Gain industry experience and specialize <span class="status next">Next</span></h3>
           <ul class="steps">
-            <li><svg><use href="#i-dot"/></svg><span><strong>Internship:</strong> secure a Summer 2027 internship in analog circuit design, board-level hardware, or embedded validation to learn design-for-manufacturing and design-for-test practices.</span></li>
+            <li><svg><use href="#i-dot"/></svg><span><strong>Internship:</strong> land a Summer 2027 internship in circuit design or hardware testing to learn how real products are designed, built, and tested at scale.</span></li>
             <li><svg><use href="#i-dot"/></svg><span><strong>Thread electives:</strong> complete advanced courses in analog electronics and control system design, then apply them in Senior Design.</span></li>
             <li><svg><use href="#i-dot"/></svg><span><strong>Network:</strong> attend the Georgia Tech Career Fair and IEEE events, and seek mentorship from practicing hardware engineers.</span></li>
           </ul>
@@ -323,8 +345,8 @@
           <span class="phase">2028 &amp; beyond</span>
           <h3>Graduate research and full-time R&amp;D <span class="status next">Goal</span></h3>
           <ul class="steps">
-            <li><svg><use href="#i-dot"/></svg><span><strong>BS/MS program:</strong> apply to Georgia Tech&rsquo;s accelerated BS/MS in ECE to research integrated circuit design and precision sensor interfaces.</span></li>
-            <li><svg><use href="#i-dot"/></svg><span><strong>Career launch:</strong> join a hardware R&amp;D team full-time, then grow toward leading mixed-signal system architecture.</span></li>
+            <li><svg><use href="#i-dot"/></svg><span><strong>BS/MS program:</strong> apply to Georgia Tech&rsquo;s accelerated BS/MS program to research chip design and precision sensors.</span></li>
+            <li><svg><use href="#i-dot"/></svg><span><strong>Career launch:</strong> join a hardware team full-time and grow toward leading the design of complete systems.</span></li>
           </ul>
         </div>
       </li>
@@ -332,142 +354,299 @@
   </div>
 </section>
 
-<!-- ===================== PROJECTS ===================== -->
-<section id="projects" class="alt">
+<!-- ===================== PROJECTS: overview (summary cards) ===================== -->
+<section id="projects" class="page alt" data-title="Projects">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Projects</span>
-      <h2>Technical projects</h2>
-      <p>Every project follows the same structure&mdash;The Problem, The Process, and The Outcome&mdash;so new work can be added as my studies continue.</p>
+      <h2>What I&rsquo;ve built</h2>
+      <p>Here is a quick summary of each project. Click any card to read the full story: the problem, how I solved it, and what happened.</p>
     </div>
 
-    <!-- ===== Discovery Project Feature (pinned) ===== -->
-    <article class="feature reveal" id="discovery">
+    <!-- ===== To add a project: copy one <a class="project-card"> card here, then copy a detail <section> below ===== -->
+    <div class="project-grid">
+      <a class="project-card is-featured reveal" href="#discovery">
+        <div class="thumb">
+          <img src="assets/img/diw-structure-uv.jpg" loading="lazy" width="1400" height="1050" alt="A small 3D-printed soft actuator glowing under UV light">
+          <span class="pc-ribbon">&#9733; Discovery Project</span>
+        </div>
+        <div class="body">
+          <div class="sub">Research &middot; Project Leader &middot; 2025 &ndash; Present</div>
+          <h3>Light-Powered Jumping Robots &amp; the Printer That Makes Them</h3>
+          <p class="summary">We built a two-nozzle 3D printer from scratch so we could print tiny soft robots that leap when light hits them.</p>
+          <div class="pc-stat"><b>10&times;</b>jump height compared with body length</div>
+          <span class="more">Read the full story <svg><use href="#i-arrow"/></svg></span>
+        </div>
+      </a>
+
+      <a class="project-card reveal" href="#project-pcb">
+        <div class="thumb">
+          <svg class="diagram" viewBox="0 0 400 250" role="img" aria-labelledby="pcb-title-c">
+            <title id="pcb-title-c">Block diagram of the daisy-chained RP2040 sensor board</title>
+            <defs><pattern id="g-c" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#18395c" stroke-width="1"/></pattern></defs>
+            <rect width="400" height="250" fill="url(#g-c)"/>
+            <g font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">
+              <!-- power path -->
+              <rect x="14" y="14" width="74" height="30" rx="5" fill="#0f2f52" stroke="#5f7fa3"/><text x="51" y="33" fill="#dbe4ee">USB 5V</text>
+              <rect x="100" y="14" width="80" height="30" rx="5" fill="#0f2f52" stroke="#5f7fa3"/><text x="140" y="33" fill="#dbe4ee">SPI 5V</text>
+              <rect x="196" y="14" width="86" height="30" rx="5" fill="#0f2f52" stroke="#b3a369"/><text x="239" y="33" fill="#b3a369">Power OR</text>
+              <rect x="298" y="14" width="88" height="30" rx="5" fill="#0f2f52" stroke="#b3a369"/><text x="342" y="33" fill="#b3a369">3.3V LDO</text>
+              <path d="M88 29h8M180 29h12M282 29h12" stroke="#b3a369" stroke-width="2"/>
+              <path d="M342 44v28H265" stroke="#b3a369" stroke-width="1.5" stroke-dasharray="4 3" fill="none"/>
+              <!-- data path -->
+              <rect x="14" y="88" width="70" height="44" rx="5" fill="#0f2f52" stroke="#5f7fa3"/><text x="49" y="108" fill="#dbe4ee">SPI</text><text x="49" y="123" fill="#8fa2b8" font-size="10">IN</text>
+              <rect x="135" y="78" width="130" height="64" rx="7" fill="#b3a369"/><text x="200" y="106" fill="#001a33" font-weight="700" font-size="14">RP2040</text><text x="200" y="124" fill="#001a33" font-size="10">+ 2 MB Flash</text>
+              <rect x="316" y="88" width="70" height="44" rx="5" fill="#0f2f52" stroke="#5f7fa3"/><text x="351" y="108" fill="#dbe4ee">SPI</text><text x="351" y="123" fill="#8fa2b8" font-size="10">OUT</text>
+              <path d="M84 110h47M265 110h47" stroke="#dbe4ee" stroke-width="2" marker-end="url(#a-c)"/>
+              <defs><marker id="a-c" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z" fill="#dbe4ee"/></marker></defs>
+              <!-- I2C bus -->
+              <path d="M200 142v28M40 170h320" stroke="#b3a369" stroke-width="2.5"/>
+              <text x="372" y="166" fill="#b3a369" font-size="10" text-anchor="end">I&#178;C</text>
+              <g fill="#0f2f52" stroke="#5f7fa3">
+                <rect x="14" y="190" width="58" height="40" rx="5"/><rect x="78" y="190" width="58" height="40" rx="5"/><rect x="142" y="190" width="58" height="40" rx="5"/>
+                <rect x="206" y="190" width="58" height="40" rx="5"/><rect x="270" y="190" width="58" height="40" rx="5"/><rect x="334" y="190" width="52" height="40" rx="5"/>
+              </g>
+              <path d="M43 170v20M107 170v20M171 170v20M235 170v20M299 170v20M360 170v20" stroke="#b3a369" stroke-width="1.5"/>
+              <g fill="#dbe4ee"><text x="43" y="215">IMU</text><text x="107" y="215">Temp</text><text x="171" y="215">Hall</text><text x="235" y="215">GPIO</text><text x="299" y="215">Color</text><text x="360" y="215">LED</text></g>
+            </g>
+          </svg>
+        </div>
+        <div class="body">
+          <div class="sub">RoboJackets Robot Soccer &middot; Fall 2026 &ndash; Present</div>
+          <h3>Multi-Sensor Circuit Board for Soccer Robots</h3>
+          <p class="summary">A credit-card-sized board that lets our robots sense motion, temperature, magnets, and color, and links to other boards in a chain.</p>
+          <div class="pc-stat"><b>6</b>sensors and chips on one 4-layer board</div>
+          <span class="more">Read the full story <svg><use href="#i-arrow"/></svg></span>
+        </div>
+      </a>
+
+      <a class="project-card reveal" href="#project-stm32">
+        <div class="thumb">
+          <svg class="diagram" viewBox="0 0 400 250" role="img" aria-labelledby="asm-title-c">
+            <title id="asm-title-c">Example ARM assembly that enables the GPIOA clock on an STM32L476</title>
+            <rect width="400" height="250" fill="#0b1e33"/>
+            <rect width="400" height="28" fill="#102a46"/>
+            <circle cx="16" cy="14" r="5" fill="#e06c75"/><circle cx="32" cy="14" r="5" fill="#e5c07b"/><circle cx="48" cy="14" r="5" fill="#98c379"/>
+            <text x="200" y="18" fill="#8fa2b8" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">gpio_init.s</text>
+            <g font-family="JetBrains Mono, monospace" font-size="13">
+              <text x="18" y="60" fill="#6f839a">; Enable GPIOA clock (RCC_AHB2ENR)</text>
+              <text x="18" y="88"><tspan fill="#c678dd">LDR  </tspan><tspan fill="#dbe4ee">r0, =</tspan><tspan fill="#b3a369">0x4002104C</tspan></text>
+              <text x="18" y="112"><tspan fill="#c678dd">LDR  </tspan><tspan fill="#dbe4ee">r1, [r0]</tspan></text>
+              <text x="18" y="136"><tspan fill="#c678dd">ORR  </tspan><tspan fill="#dbe4ee">r1, r1, #</tspan><tspan fill="#b3a369">1</tspan></text>
+              <text x="18" y="160"><tspan fill="#c678dd">STR  </tspan><tspan fill="#dbe4ee">r1, [r0]</tspan></text>
+              <text x="18" y="194" fill="#6f839a">; no HAL, no surprises</text>
+              <text x="18" y="222" fill="#98c379">&#10003; build OK  &#183;  STM32L476 (Cortex-M4)</text>
+            </g>
+          </svg>
+        </div>
+        <div class="body">
+          <div class="sub">Project Leader &middot; Mar &ndash; Jul 2026</div>
+          <h3>Programming a Microcontroller from the Ground Up</h3>
+          <p class="summary">Code that talks to the chip directly, with no shortcuts, to run a keypad, a motor, and sensors with precise timing.</p>
+          <div class="pc-stat"><b>0</b>ready-made code libraries used</div>
+          <span class="more">Read the full story <svg><use href="#i-arrow"/></svg></span>
+        </div>
+      </a>
+
+      <a class="project-card reveal" href="#project-logic">
+        <div class="thumb">
+          <img src="assets/img/logic-2.jpg" loading="lazy" width="1400" height="1049" alt="Breadboard with logic chips, red indicator LEDs, and many jumper wires">
+        </div>
+        <div class="body">
+          <div class="sub">Digital Circuits Lab &middot; SCUPI</div>
+          <h3>Hand-Wired Digital Logic Circuits</h3>
+          <p class="summary">Turning logic diagrams on paper into working circuits on a breadboard, and learning to debug them step by step.</p>
+          <div class="pc-stat"><b>100%</b>of circuits passed their truth tables</div>
+          <span class="more">Read the full story <svg><use href="#i-arrow"/></svg></span>
+        </div>
+      </a>
+
+      <article class="project-card placeholder reveal">
+        <div>
+          <div class="plus">+</div>
+          <h3>More projects coming soon</h3>
+          <p>New Georgia Tech coursework, VIP research, and RoboJackets builds will be added here as I finish them.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECT DETAIL: Discovery (DIW printer) ===================== -->
+<section id="discovery" class="page project-page alt" data-parent="projects" data-title="Discovery Project">
+  <div class="container">
+    <a class="back-link" href="#projects"><svg><use href="#i-arrow"/></svg> All projects</a>
+    <article class="feature">
       <header class="feature-head">
         <span class="ribbon">&#9733; Discovery Project Feature</span>
-        <h3>Custom Dual-Extruder DIW 3D Printer for Photo-Responsive Jumping Soft Robots</h3>
+        <h2>A Custom 3D Printer for Light-Powered Jumping Soft Robots</h2>
         <div class="meta">
           <span><b>Role</b> Project Leader</span>
-          <span><b>Team</b> 5 students &middot; ECE, MSE, ME, IE</span>
+          <span><b>Team</b> 5 students from 4 majors</span>
           <span><b>Advisor</b> Prof. Wenwen Xu</span>
           <span><b>Timeline</b> Mar 2025 &ndash; Present</span>
         </div>
       </header>
       <div class="feature-body">
         <div class="ppo">
+          <div class="in-short">
+            <b>In short</b>
+            <p>No 3D printer on the market could print the soft robots we had in mind, so my team built one. The result: tiny printed parts that jump up to 10 times their own length when UV light hits them.</p>
+          </div>
           <div class="kpis">
-            <div><b>0.0008&Prime;</b><span>Nozzle-to-bed height variance (0.02 mm)</span></div>
             <div><b>10&times;</b><span>Jump height vs. body length</span></div>
-            <div><b>820</b><span>Thrust-to-weight ratio</span></div>
+            <div><b>820&times;</b><span>Push compared with its own weight</span></div>
+            <div><b>$240</b><span>Total printer hardware cost</span></div>
           </div>
 
-          <h4><span class="num">01</span>The Problem</h4>
+          <h3><span class="num">01</span>The Problem</h3>
           <p>
-            Light-driven soft actuators can move without wires or batteries, which makes them attractive for micro-robots
-            and for tight spaces such as the inside of the human body. Unfortunately, most photo-responsive materials,
-            including liquid crystal elastomers, hydrogels, and photomechanical crystals, deform slowly, deliver little
-            power, and are usually cast as fragile flat films. To make a soft robot that can actually <em>jump</em>, we needed
-            a single three-dimensional part that combines a rigid base, a flexible hinge, a light-sensitive layer, and a
-            latch-mediated spring mechanism that stores energy and releases it in milliseconds through a snap-through
-            instability.
+            Imagine a robot smaller than a coin that jumps when you shine a light on it, with no wires and no batteries.
+            Robots like this could one day work in very tight spaces, even inside the human body. Materials that bend under
+            light already exist, but they usually move slowly, push weakly, and can only be made as thin, flat films.
           </p>
           <p>
-            The bottleneck was manufacturing. No commercial 3D printer we could find was able to print volatile,
-            solvent-based photo-responsive inks while also blending two materials continuously, so that stiff and soft
-            regions would join through a smooth concentration gradient instead of peeling apart at a sharp interface.
+            To build a robot that truly jumps, we needed a single 3D-printed part that combines a stiff base, a flexible
+            hinge, a light-sensitive layer, and a spring-like latch that stores energy and releases it in a split second.
+            No printer we could buy could make that part. It had to print liquid inks that dry quickly, and it had to blend
+            two materials smoothly so the stiff and soft sections would not peel apart.
           </p>
 
-          <h4><span class="num">02</span>The Process</h4>
+          <h3><span class="num">02</span>The Process</h3>
           <p>
-            As project leader of a team spanning electrical, materials, mechanical, and industrial engineering, I organized
-            our work as a closed loop of <strong>material, equipment, software, and structure</strong>:
+            I led a five-person team from electrical, materials, mechanical, and industrial engineering. We split the work
+            into four connected pieces: the material, the machine, the software, and the final structure.
           </p>
           <ol>
             <li>
-              <strong>Mechatronic hardware.</strong> Starting from an open-source frame, I built a dual-extruder Direct Ink Writing
-              (DIW) printer on a <strong>BigTreeTech Octopus Pro</strong> controller with <strong>TMC2209</strong> stepper drivers,
-              keeping the total hardware cost to roughly <strong>$240</strong>. To control solvent evaporation and warping, I added a hollow
-              aluminum build plate with a heating element and a platinum RTD temperature sensor. I also built a precision
-              leveling platform that held nozzle-to-bed variance within <strong>0.0008&nbsp;in (0.02&nbsp;mm)</strong>, and moved the power supply and
-              mainboard to lower the center of gravity and stop the frame from flexing under the heavy syringe motors.
+              <strong>Building the printer.</strong> Starting from an open-source frame, I built a printer with two syringe
+              nozzles for about <strong>$240</strong> in parts (Figs.&nbsp;4&ndash;5). I added a heated aluminum bed with a
+              temperature sensor so the inks dry evenly, built a leveling platform that keeps the nozzle height steady to within
+              <strong>0.0008&nbsp;in (0.02&nbsp;mm)</strong>, about a quarter of the width of a human hair, and moved the heavy
+              electronics lower so the frame stopped wobbling.
             </li>
             <li>
-              <strong>Gradient slicer software.</strong> Standard slicers cannot mix two syringes, so we wrote the
-              <strong>DIW G-code Gradient Converter</strong>. It reads ordinary single-nozzle G-code and rewrites it for two
-              synchronized extruders, splitting each extrusion move as <code>E = E<sub>1</sub> + E<sub>2</sub></code> according to a
-              user-defined gradient formula. We wrapped it in a desktop GUI (Fig.&nbsp;3) that previews the gradient field, calibrates the lag volume between the two syringes,
-              and streams G-code to the printer over a serial port while staying compatible with Cura and Pronterface, so slicing, previewing, and printing happen in one workflow.
+              <strong>Writing the software.</strong> Normal 3D-printing software can only control one material at a time.
+              We wrote our own program that takes a regular print file and splits every movement between the two syringes,
+              so the mix can shift gradually from one material to the other. Its desktop app (Fig.&nbsp;3) previews the blend,
+              corrects for the small delay between the two syringes, and sends the job straight to the printer.
             </li>
             <li>
-              <strong>Ink formulation and tuning.</strong> With my materials teammates, I helped formulate inks containing
-              azobenzene chromophores, PVP, and fumed silica. We used meniscus-guided crystallization in binary solvents
-              (for example, 8:2 DMF:ethanol at 194&ndash;212&nbsp;&deg;F, or 90&ndash;100&nbsp;&deg;C) and swept print speeds from <code>F2.2</code> to
-              <code>F5.0</code> until crystal growth kept pace with solidification.
+              <strong>Tuning the ink.</strong> With my materials teammates, I helped mix light-sensitive inks, and we tested
+              many print speeds and temperatures until the crystals in the ink grew neatly lined up with the printing
+              direction (Fig.&nbsp;7).
             </li>
           </ol>
 
-          <h4><span class="num">03</span>The Outcome</h4>
+          <h3><span class="num">03</span>The Outcome</h3>
           <p>
-            The upgraded printer reached an alignment precision of <strong>0.004&nbsp;in (0.1&nbsp;mm)</strong> and printed continuous
-            concentration gradients across four distinct transition zones. Using the tuned parameters, we produced
-            lightweight latch-based actuators that jump repeatedly under UV light, reaching an <strong>unloaded jump height
-            of 10 times their body length</strong>, a <strong>thrust-to-weight ratio of 820</strong>, and a work density of
-            about <strong>40,000&nbsp;J/m&sup3;</strong>.
+            The finished printer lines up its two nozzles to within <strong>0.004&nbsp;in (0.1&nbsp;mm)</strong> and can print
+            smooth blends between materials in a single job (Fig.&nbsp;6). The small actuators we printed jump again and again
+            under UV light (Fig.&nbsp;2): up to <strong>10 times their own body length</strong>, pushing with a force about
+            <strong>820 times their own weight</strong>.
           </p>
           <p>
-            Beyond the numbers, this project taught me how to lead people from different disciplines toward a shared
-            technical goal, and how electrical design choices such as sensor placement, driver selection, and power layout
-            directly limit what a materials scientist can achieve. The work is now being prepared as a software copyright
-            for the gradient G-code generator, an invention patent for the modified printer, and a journal manuscript.
+            Beyond the numbers, I learned how to lead teammates from different majors toward one goal, and how electrical
+            choices, such as where a sensor goes, which motor driver to use, and how power is laid out, directly limit what a
+            materials scientist can achieve. The team is now preparing a software copyright, a patent application for the
+            printer, and a journal paper.
           </p>
+
+          <details class="tech">
+            <summary>Technical details for engineers</summary>
+            <ul>
+              <li>Controller: BigTreeTech Octopus Pro with TMC2209 stepper drivers; hollow aluminum bed with a heater and a platinum RTD sensor.</li>
+              <li>Slicer: rewrites single-nozzle G-code for two synchronized extruders, splitting each move as <code>E = E<sub>1</sub> + E<sub>2</sub></code>; four modes (basic, path optimization, zipper gradient, formula gradient); lag-volume calibration; serial-port printing; compatible with Cura and Pronterface.</li>
+              <li>Inks: azobenzene (DR13) chromophores, PVP, and fumed silica; meniscus-guided crystallization in binary solvents such as 8:2 DMF:ethanol at 194&ndash;212&nbsp;&deg;F (90&ndash;100&nbsp;&deg;C); feed rates <code>F2.2</code>&ndash;<code>F5.0</code>.</li>
+              <li>Actuator: latch-mediated spring actuation (snap-through instability); work density about 40,000&nbsp;J/m&sup3;.</li>
+            </ul>
+          </details>
         </div>
 
         <div class="feature-media">
           <figure class="media">
             <div class="frame"><span class="tag">Video &middot; Original</span>
-              <video src="assets/media/diw-jump.mp4" poster="assets/img/diw-structure-uv.jpg" controls muted loop playsinline preload="metadata" aria-label="Video of a printed photo-responsive structure jumping under UV light"></video>
+              <video src="assets/media/diw-jump.mp4" poster="assets/img/diw-structure-uv.jpg" controls muted loop playsinline preload="metadata" aria-label="Video of a printed light-responsive structure jumping under UV light"></video>
             </div>
-            <figcaption><span class="fig-no">FIG. 2</span>A printed latch-mediated actuator snapping and jumping under UV irradiation.
+            <figcaption><span class="fig-no">FIG. 2</span>A printed actuator snapping and jumping under UV light.
               <span class="source">Original video recorded by Jiayu Shi and team, 2025</span></figcaption>
           </figure>
           <figure class="media">
-            <div class="frame"><span class="tag">Original &middot; Software</span><img class="contain" src="assets/img/diw-slicer-gui.jpg" loading="lazy" width="1600" height="893" alt="Screenshot of the DIW Dual-Liquid Mixing Slicer application with print parameters, concentration gradient modes, sub-zone settings, and serial port printing controls"></div>
-            <figcaption><span class="fig-no">FIG. 3</span>Our self-developed DIW Dual-Liquid Mixing Slicer: print parameters, four concentration modes (basic, path optimization, zipper gradient, and formula gradient), per-zone mixing ratios, lag-volume calibration, and direct serial-port printing in one window.
+            <div class="frame"><span class="tag">Original &middot; Software</span><img class="contain" src="assets/img/diw-slicer-gui.jpg" loading="lazy" width="1600" height="893" alt="Screenshot of our dual-ink slicing software showing print settings, blend modes, zone settings, and printer connection controls"></div>
+            <figcaption><span class="fig-no">FIG. 3</span>Our own slicing software: choose how the two inks blend, set the mix for each zone, and send the job straight to the printer.
               <span class="source">Software and screenshot by Jiayu Shi and team</span></figcaption>
           </figure>
           <div class="pair">
             <figure class="media">
-              <div class="frame"><span class="tag">Original</span><img src="assets/img/diw-printer-wiring.jpg" loading="lazy" width="1050" height="1400" alt="Rear view of the red-framed dual-extruder DIW printer showing the controller board and wiring"></div>
-              <figcaption><span class="fig-no">FIG. 4</span>Rear view: Octopus Pro controller, TMC2209 drivers, and relocated power supply.
+              <div class="frame"><span class="tag">Original</span><img src="assets/img/diw-printer-wiring.jpg" loading="lazy" width="1050" height="1400" alt="Rear view of the red-framed two-nozzle printer showing the controller board and wiring"></div>
+              <figcaption><span class="fig-no">FIG. 4</span>Rear view: controller board, motor drivers, and relocated power supply.
                 <span class="source">Photo by Jiayu Shi</span></figcaption>
             </figure>
             <figure class="media">
-              <div class="frame"><span class="tag">Original</span><img src="assets/img/diw-printer-front.jpg" loading="lazy" width="1050" height="1400" alt="Front view of the dual-extruder DIW printer with twin syringe extruders above the heated aluminum bed"></div>
-              <figcaption><span class="fig-no">FIG. 5</span>Front view: twin syringe extruders above the heated aluminum build plate.
+              <div class="frame"><span class="tag">Original</span><img src="assets/img/diw-printer-front.jpg" loading="lazy" width="1050" height="1400" alt="Front view of the two-nozzle printer with twin syringes above the heated aluminum bed"></div>
+              <figcaption><span class="fig-no">FIG. 5</span>Front view: twin syringe nozzles above the heated bed.
                 <span class="source">Photo by Jiayu Shi</span></figcaption>
             </figure>
           </div>
           <figure class="media">
-            <div class="frame"><span class="tag">Original</span><img src="assets/img/diw-gradient-print.jpg" loading="lazy" width="1400" height="1050" alt="Four printed square patterns on an aluminum plate showing different ink concentrations"></div>
-            <figcaption><span class="fig-no">FIG. 6</span>Continuous concentration-gradient printing: four zones extruded with different mixing ratios in a single job.
+            <div class="frame"><span class="tag">Original</span><img src="assets/img/diw-gradient-print.jpg" loading="lazy" width="1400" height="1050" alt="Four printed squares on an aluminum plate, each with a different ink mix"></div>
+            <figcaption><span class="fig-no">FIG. 6</span>Four squares printed in one job, each with a different ink mix.
               <span class="source">Photo by Jiayu Shi and team</span></figcaption>
           </figure>
           <figure class="media">
-            <div class="frame"><span class="tag">Original</span><img src="assets/img/diw-microscope-crystals.jpg" loading="lazy" width="1400" height="1050" alt="Optical micrograph of elongated blue and red crystal domains aligned diagonally, with a 100 micrometer scale bar"></div>
-            <figcaption><span class="fig-no">FIG. 7</span>Optical micrograph of meniscus-guided crystallization: crystal domains grow aligned with the print direction (scale bar: 100&nbsp;&micro;m).
+            <div class="frame"><span class="tag">Original</span><img src="assets/img/diw-microscope-crystals.jpg" loading="lazy" width="1400" height="1050" alt="Microscope image of long blue and red crystals lined up diagonally, with a 100 micrometer scale bar"></div>
+            <figcaption><span class="fig-no">FIG. 7</span>Under the microscope: crystals grow lined up with the printing direction (scale bar: 100&nbsp;&micro;m).
               <span class="source">Optical microscope image by Jiayu Shi and team</span></figcaption>
           </figure>
         </div>
       </div>
     </article>
+    <nav class="project-pager" aria-label="Project navigation">
+      <a class="btn btn-outline" href="#projects">All projects</a>
+      <a class="btn btn-navy" href="#project-pcb">Next: Multi-Sensor Circuit Board <svg><use href="#i-arrow"/></svg></a>
+    </nav>
+  </div>
+</section>
 
-    <!-- ===== Project grid: copy one <article class="project-card"> to add a new project ===== -->
-    <h3 class="h3-rule reveal">More projects</h3>
-    <div class="project-grid">
-
-      <!-- Project: RoboCup PCB -->
-      <article class="project-card reveal">
-        <div class="thumb">
+<!-- ===================== PROJECT DETAIL: RoboCup PCB ===================== -->
+<section id="project-pcb" class="page project-page alt" data-parent="projects" data-title="Multi-Sensor Circuit Board">
+  <div class="container">
+    <a class="back-link" href="#projects"><svg><use href="#i-arrow"/></svg> All projects</a>
+    <article class="feature">
+      <header class="feature-head">
+        <span class="ribbon">Project</span>
+        <h2>Multi-Sensor Circuit Board for Soccer Robots</h2>
+        <div class="meta">
+          <span><b>Team</b> RoboJackets RoboCup (Electrical)</span>
+          <span><b>Role</b> Hardware Designer</span>
+          <span><b>Timeline</b> Fall 2026 &ndash; Present</span>
+        </div>
+      </header>
+      <div class="feature-body">
+        <div class="ppo">
+          <div class="in-short">
+            <b>In short</b>
+            <p>I designed a small circuit board that gives our soccer robots six kinds of sensing and can be chained to other boards with a single cable.</p>
+          </div>
+          <h3><span class="num">01</span>The Problem</h3>
+          <p>Robot soccer players need to know how they are moving, which way they face, and what is around them, all without a tangle of wires. The team needed a compact, reliable sensor board that could link to other boards in a chain and safely take power from either a USB cable or the board before it.</p>
+          <h3><span class="num">02</span>The Process</h3>
+          <p>I designed the board in KiCad around a small RP2040 microcontroller and connected six parts: a motion sensor, a temperature sensor, a magnetic sensor, a switch reader, a color sensor, and a driver for eight RGB lights. A small power-selection circuit picks USB or chain power without letting the two fight each other. I used four copper layers, with the two inner layers for power and ground, to keep signals clean on a board about the size of a credit card (3.15&nbsp;&times;&nbsp;1.97&nbsp;in).</p>
+          <h3><span class="num">03</span>The Outcome</h3>
+          <p>The design is complete, has passed every design-rule check, and is now being manufactured. Next, I will write the startup code and test each sensor before the competition season.</p>
+          <details class="tech">
+            <summary>Technical details for engineers</summary>
+            <ul>
+              <li>RP2040 with external QSPI flash; SPI in/out for daisy-chaining, with a growing data packet passed to the next board.</li>
+              <li>I&sup2;C devices: ICM-42605 IMU, LM75 temperature sensor, TMAG5273 Hall-effect sensor, TCA9534 GPIO expander with DIP switch, VEML3328 color sensor, IS31FL3254 LED driver.</li>
+              <li>Power: LM66100 ideal-diode OR-ing between USB and chain 5&nbsp;V, followed by an AP2112K 3.3&nbsp;V LDO.</li>
+              <li>4-layer stack-up with internal 3.3&nbsp;V and GND planes; tight QFN fan-out; 80&nbsp;&times;&nbsp;50&nbsp;mm outline.</li>
+            </ul>
+          </details>
+        </div>
+        <div class="feature-media">
+          <figure class="media">
+            <div class="frame">
           <svg class="diagram" viewBox="0 0 400 250" role="img" aria-labelledby="pcb-title">
             <title id="pcb-title">Block diagram of the daisy-chained RP2040 sensor board</title>
             <defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#18395c" stroke-width="1"/></pattern></defs>
@@ -497,30 +676,58 @@
               <g fill="#dbe4ee"><text x="43" y="215">IMU</text><text x="107" y="215">Temp</text><text x="171" y="215">Hall</text><text x="235" y="215">GPIO</text><text x="299" y="215">Color</text><text x="360" y="215">LED</text></g>
             </g>
           </svg>
-        </div>
-        <p class="cap"><em>Fig. 8 &middot; System block diagram of the sensor board.</em> Source: diagram created by Jiayu Shi from the RoboJackets onboarding specification.</p>
-        <div class="body">
-          <h3>Daisy-Chained Multi-Sensor PCB</h3>
-          <div class="sub">RoboJackets RoboCup &middot; Electrical Hardware Designer &middot; Fall 2026 &ndash; Present</div>
-          <p class="summary">A 4-layer, 3.15&nbsp;&times;&nbsp;1.97&nbsp;in (80&nbsp;&times;&nbsp;50&nbsp;mm) RP2040 board that collects data from six I&sup2;C sensors and passes a growing data packet to the next board over SPI.</p>
-          <div class="chips"><span class="chip">KiCad</span><span class="chip">RP2040</span><span class="chip">4-Layer PCB</span><span class="chip">I&sup2;C / SPI</span><span class="chip">Power OR-ing</span></div>
-          <details>
-            <summary>Problem &middot; Process &middot; Outcome</summary>
-            <div class="ppo">
-              <h4><span class="num">01</span>The Problem</h4>
-              <p>Autonomous soccer robots need compact, noise-resistant sensor suites that monitor motion, orientation, temperature, magnetic fields, and color without a tangle of wiring. The board also had to accept power from either USB or the previous board in the chain without ever back-feeding either source.</p>
-              <h4><span class="num">02</span>The Process</h4>
-              <p>I captured a hierarchical schematic in KiCad around an RP2040 with external flash, then integrated an ICM-42605 IMU, LM75 temperature sensor, TMAG5273 Hall-effect sensor, TCA9534 GPIO expander with a DIP switch, VEML3328 color sensor, and an IS31FL3254 driver for eight RGB LEDs. An LM66100 ideal-diode controller selects between USB and chain power before an AP2112K 3.3&nbsp;V regulator. On the 4-layer stack-up I dedicated internal 3.3&nbsp;V and ground planes and worked through tight QFN fan-out and clearance rules.</p>
-              <h4><span class="num">03</span>The Outcome</h4>
-              <p>The schematic, layout, and design rule check are complete and the board is in fabrication. Next, I will bring up the firmware with the Pico SDK and validate every I&sup2;C device before the competition season.</p>
             </div>
+            <figcaption><span class="fig-no">FIG. 8</span>Block diagram: power comes in at the top, data flows left to right, and six sensors share one bus along the bottom.
+              <span class="source">Diagram created by Jiayu Shi from the RoboJackets onboarding specification</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+    <nav class="project-pager" aria-label="Project navigation">
+      <a class="btn btn-outline" href="#discovery"><svg class="flip"><use href="#i-arrow"/></svg> Previous: Discovery Project</a>
+      <a class="btn btn-navy" href="#project-stm32">Next: Microcontroller Programming <svg><use href="#i-arrow"/></svg></a>
+    </nav>
+  </div>
+</section>
+
+<!-- ===================== PROJECT DETAIL: STM32 ===================== -->
+<section id="project-stm32" class="page project-page alt" data-parent="projects" data-title="Microcontroller Programming">
+  <div class="container">
+    <a class="back-link" href="#projects"><svg><use href="#i-arrow"/></svg> All projects</a>
+    <article class="feature">
+      <header class="feature-head">
+        <span class="ribbon">Project</span>
+        <h2>Programming a Microcontroller from the Ground Up</h2>
+        <div class="meta">
+          <span><b>Role</b> Project Leader</span>
+          <span><b>Advisor</b> Prof. Fashu Xu</span>
+          <span><b>Timeline</b> Mar &ndash; Jul 2026</span>
+        </div>
+      </header>
+      <div class="feature-body">
+        <div class="ppo">
+          <div class="in-short">
+            <b>In short</b>
+            <p>Instead of using ready-made code libraries, we programmed an STM32 chip directly, so we understood and controlled every step it took.</p>
+          </div>
+          <h3><span class="num">01</span>The Problem</h3>
+          <p>Ready-made code libraries make microcontrollers easier to program, but they hide what the chip is really doing and can add small delays. In machines that must react on time, those hidden details matter. Our goal was to control the chip directly, one setting at a time.</p>
+          <h3><span class="num">02</span>The Process</h3>
+          <p>I led the code design, writing in C and assembly language to set up the chip&rsquo;s clock, its input and output pins, and its interrupts, the signals that let the chip react instantly to events. On top of that foundation we built a keypad reader, a stepper-motor controller, and a sensor connection, and we checked the timing of every signal with an oscilloscope.</p>
+          <h3><span class="num">03</span>The Outcome</h3>
+          <p>The finished system responded quickly and reliably to every input. The project gave me the low-level confidence I now use when bringing a new circuit board to life for the first time.</p>
+          <details class="tech">
+            <summary>Technical details for engineers</summary>
+            <ul>
+              <li>STM32L476 (ARM Cortex-M4) programmed in Keil &micro;Vision 5 with mixed C and ARM assembly, no HAL.</li>
+              <li>Register-level clock-tree, GPIO, and NVIC/EXTI interrupt configuration.</li>
+              <li>Matrix keypad scanning, stepper-motor phase sequencing, and an I&sup2;C sensor interface, verified with a digital storage oscilloscope.</li>
+            </ul>
           </details>
         </div>
-      </article>
-
-      <!-- Project: STM32 bare metal -->
-      <article class="project-card reveal">
-        <div class="thumb">
+        <div class="feature-media">
+          <figure class="media">
+            <div class="frame">
           <svg class="diagram" viewBox="0 0 400 250" role="img" aria-labelledby="asm-title">
             <title id="asm-title">Example ARM assembly that enables the GPIOA clock on an STM32L476</title>
             <rect width="400" height="250" fill="#0b1e33"/>
@@ -537,70 +744,76 @@
               <text x="18" y="222" fill="#98c379">&#10003; build OK  &#183;  STM32L476 (Cortex-M4)</text>
             </g>
           </svg>
-        </div>
-        <p class="cap"><em>Fig. 9 &middot; Register-level style used throughout the firmware.</em> Source: illustrative excerpt written by Jiayu Shi.</p>
-        <div class="body">
-          <h3>STM32L476 Bare-Metal Embedded Systems</h3>
-          <div class="sub">Project Leader &middot; Advisor: Prof. Fashu Xu &middot; Mar &ndash; Jul 2026</div>
-          <p class="summary">Deterministic, register-level firmware in C and ARM Cortex-M4 assembly for keypads, stepper motors, interrupts, and I&sup2;C sensors.</p>
-          <div class="chips"><span class="chip">C</span><span class="chip">ARM Assembly</span><span class="chip">STM32L476</span><span class="chip">Keil &micro;Vision 5</span><span class="chip">Oscilloscope</span></div>
-          <details>
-            <summary>Problem &middot; Process &middot; Outcome</summary>
-            <div class="ppo">
-              <h4><span class="num">01</span>The Problem</h4>
-              <p>Vendor hardware abstraction layers make development faster, but they add overhead and hide the timing details that matter in real-time control. Our goal was to understand and control the microcontroller directly, one register at a time.</p>
-              <h4><span class="num">02</span>The Process</h4>
-              <p>I led the firmware architecture in Keil &micro;Vision 5, writing mixed C and assembly routines that configure the clock tree, GPIO registers, and NVIC/EXTI interrupts. On top of these drivers we built a matrix keypad scanner, stepper motor phase sequencing, and an I&sup2;C sensor interface, and we verified signal timing and bus integrity with a digital storage oscilloscope.</p>
-              <h4><span class="num">03</span>The Outcome</h4>
-              <p>We delivered a responsive control system with reliable multi-peripheral I&sup2;C communication and predictable interrupt latency. The experience gave me the low-level confidence I now use when planning firmware bring-up for my RoboCup board.</p>
             </div>
+            <figcaption><span class="fig-no">FIG. 9</span>A short example of the low-level style used throughout the project: four instructions that switch on one part of the chip.
+              <span class="source">Illustrative excerpt written by Jiayu Shi</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+    <nav class="project-pager" aria-label="Project navigation">
+      <a class="btn btn-outline" href="#project-pcb"><svg class="flip"><use href="#i-arrow"/></svg> Previous: Circuit Board</a>
+      <a class="btn btn-navy" href="#project-logic">Next: Digital Logic Circuits <svg><use href="#i-arrow"/></svg></a>
+    </nav>
+  </div>
+</section>
+
+<!-- ===================== PROJECT DETAIL: Digital logic ===================== -->
+<section id="project-logic" class="page project-page alt" data-parent="projects" data-title="Digital Logic Circuits">
+  <div class="container">
+    <a class="back-link" href="#projects"><svg><use href="#i-arrow"/></svg> All projects</a>
+    <article class="feature">
+      <header class="feature-head">
+        <span class="ribbon">Project</span>
+        <h2>Hand-Wired Digital Logic Circuits</h2>
+        <div class="meta">
+          <span><b>Course</b> Digital Circuits &amp; Systems Lab</span>
+          <span><b>School</b> SCUPI</span>
+        </div>
+      </header>
+      <div class="feature-body">
+        <div class="ppo">
+          <div class="in-short">
+            <b>In short</b>
+            <p>I turned logic designs on paper into working circuits on a breadboard, and built a step-by-step debugging habit I still use on every board.</p>
+          </div>
+          <h3><span class="num">01</span>The Problem</h3>
+          <p>A logic circuit that works on paper often fails on the bench because of a loose wire, an unconnected input, or a timing issue. The lab challenge was to turn truth tables and state diagrams into hardware that actually works.</p>
+          <h3><span class="num">02</span>The Process</h3>
+          <p>I simplified each design on paper, mapped it onto standard logic chips, and wired it on a breadboard, using switches and push buttons as inputs and LEDs as outputs. I labeled key points in the circuit, tested one block at a time, and tracked down faults with a logic probe and a multimeter.</p>
+          <h3><span class="num">03</span>The Outcome</h3>
+          <p>Every circuit matched its truth table and state sequence. More importantly, I built a debugging habit, <em>isolate, measure, then fix</em>, that I now use on every board I build.</p>
+          <details class="tech">
+            <summary>Technical details for engineers</summary>
+            <ul>
+              <li>Boolean algebra and Karnaugh-map minimization; combinational and sequential (state-machine) designs.</li>
+              <li>Discrete 74-series logic ICs, DIP-switch and push-button inputs, LED outputs; fault tracing with a logic probe and multimeter.</li>
+            </ul>
           </details>
         </div>
-      </article>
-
-      <!-- Project: Digital logic breadboard -->
-      <article class="project-card reveal">
-        <div class="thumb">
-          <img src="assets/img/logic-2.jpg" loading="lazy" width="1400" height="1049" alt="Breadboard with logic ICs, red indicator LEDs, and a dense web of jumper wires">
+        <div class="feature-media">
+          <figure class="media">
+            <div class="frame"><span class="tag">Original</span><img src="assets/img/logic-2.jpg" loading="lazy" width="1400" height="1049" alt="Breadboard with logic chips, red indicator LEDs, and many jumper wires"></div>
+            <figcaption><span class="fig-no">FIG. 10</span>A sequential logic prototype with LED outputs under test.
+              <span class="source">Photo by Jiayu Shi</span></figcaption>
+          </figure>
+          <figure class="media">
+            <div class="frame"><span class="tag">Original</span><img src="assets/img/logic-3.jpg" loading="lazy" width="1187" height="821" alt="Breadboard with an 8-position switch, logic chips, and LEDs, labeled with input names"></div>
+            <figcaption><span class="fig-no">FIG. 11</span>A combinational circuit with switch inputs and labeled test points.
+              <span class="source">Photo by Jiayu Shi</span></figcaption>
+          </figure>
         </div>
-        <p class="cap"><em>Fig. 10 &middot; Sequential logic prototype with LED outputs under test.</em> Source: photo by Jiayu Shi.</p>
-        <div class="body">
-          <h3>Digital Logic Breadboard Prototyping</h3>
-          <div class="sub">Digital Circuits &amp; Systems Lab &middot; SCUPI</div>
-          <p class="summary">Hands-on design, wiring, and debugging of combinational and sequential logic circuits built from discrete logic ICs.</p>
-          <div class="chips"><span class="chip">Logic ICs</span><span class="chip">Boolean Design</span><span class="chip">Breadboarding</span><span class="chip">Debugging</span></div>
-          <details>
-            <summary>Problem &middot; Process &middot; Outcome</summary>
-            <div class="ppo">
-              <h4><span class="num">01</span>The Problem</h4>
-              <p>Logic that works on paper often fails on the bench because of wiring mistakes, floating inputs, or timing issues. The lab challenge was to turn truth tables and state diagrams into working hardware.</p>
-              <h4><span class="num">02</span>The Process</h4>
-              <p>I simplified each design with Boolean algebra and Karnaugh maps, mapped it onto standard logic ICs, and wired it on a breadboard with DIP switches and push buttons as inputs and LEDs as outputs. I labeled key nodes, tested one block at a time, and traced faults with a logic probe and multimeter.</p>
-              <h4><span class="num">03</span>The Outcome</h4>
-              <p>All circuits met their truth tables and state sequences, and I developed a systematic debugging habit: isolate, measure, and then fix, which I still use on every board I build.</p>
-              <figure class="media" style="margin-top:12px">
-                <div class="frame"><img src="assets/img/logic-3.jpg" loading="lazy" width="1187" height="821" alt="Breadboard with an 8-position DIP switch, logic ICs, and LEDs, annotated with input labels"></div>
-                <figcaption><span class="fig-no">FIG. 11</span>Combinational circuit with DIP-switch inputs and annotated test points.<span class="source">Photo by Jiayu Shi</span></figcaption>
-              </figure>
-            </div>
-          </details>
-        </div>
-      </article>
-
-      <!-- Placeholder: shows the grid is built to grow -->
-      <article class="project-card placeholder reveal">
-        <div>
-          <div class="plus">+</div>
-          <h3>More projects coming soon</h3>
-          <p>This portfolio grid is designed to grow. New Georgia Tech coursework, VIP research, and RoboJackets builds will be added here as they are completed.</p>
-        </div>
-      </article>
-    </div>
+      </div>
+    </article>
+    <nav class="project-pager" aria-label="Project navigation">
+      <a class="btn btn-outline" href="#project-stm32"><svg class="flip"><use href="#i-arrow"/></svg> Previous: Microcontroller Programming</a>
+      <a class="btn btn-navy" href="#projects">Back to all projects</a>
+    </nav>
   </div>
 </section>
 
 <!-- ===================== SKILLS & EXPERIENCE ===================== -->
-<section id="skills">
+<section id="skills" class="page" data-title="Skills &amp; Experience">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Skills &amp; Experience</span>
@@ -647,9 +860,8 @@
           <h3>Technical Department Intern</h3>
           <div class="where">Shenzhen Bestsoon Electronic Technology Co., Ltd. &middot; Shenzhen, China</div>
           <ul>
-            <li>Studied the mechanical structure and operating principles of the ASMPT AD8312PIUS die bonder, a high-speed machine that places semiconductor dies onto lead frames and substrates.</li>
-            <li>Practiced calibration and maintenance routines and saw firsthand how equipment uptime affects production yield.</li>
-            <li>Applied circuit coursework to support technical assignments with experienced engineers.</li>
+            <li>Learned how the ASMPT die bonder, a high-speed machine that places computer chips into their packages, is run, calibrated, and maintained.</li>
+            <li>Saw firsthand how keeping machines running affects factory output, and supported technical tasks alongside experienced engineers.</li>
           </ul>
         </div>
       </article>
@@ -659,7 +871,7 @@
           <h3>Undergraduate Research Lead</h3>
           <div class="where">Provincial-Level Innovation Training Program &middot; Advisor: Prof. Wenwen Xu</div>
           <ul>
-            <li>Wrote the funded proposal and led a five-student team across four disciplines (see the <a href="#discovery">Discovery Project Feature</a>).</li>
+            <li>Wrote the funded proposal and led a five-student team from four majors (see the <a href="#discovery">Discovery Project Feature</a>).</li>
             <li>Divided the work into hardware, software, and materials tracks and presented our mid-term results at the program&rsquo;s formal review defense.</li>
             <li>Contributing to a software copyright, a patent application, and a journal manuscript.</li>
           </ul>
@@ -744,7 +956,7 @@
 </section>
 
 <!-- ===================== BEYOND THE LAB ===================== -->
-<section id="beyond" class="alt">
+<section id="beyond" class="page alt" data-title="Beyond the Lab">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Beyond the Lab</span>
@@ -756,7 +968,7 @@
       <article class="hobby reveal">
         <div class="hobby-text">
           <h3><svg><use href="#i-music"/></svg>Guitar &amp; Lutherie Acoustics</h3>
-          <p>I am a fingerstyle and acoustic guitarist and have performed live at the Xiancao Music Festival. What fascinates me most is the physics inside the instrument: how tonewoods such as Adirondack spruce, rosewood, and mahogany, together with bracing patterns like scalloped X-bracing and V-Class bracing, shape resonance and frequency response.</p>
+          <p>I am a fingerstyle and acoustic guitarist and have performed live at the Xiancao Music Festival. What fascinates me most is the physics inside the instrument: how the type of wood and the pattern of braces under the top shape the way a guitar resonates and sounds.</p>
           <p>To me, a guitar top is a beautifully tuned mechanical filter&mdash;the same ideas I study in signals and systems, carved in wood.</p>
         </div>
         <div class="mosaic">
@@ -831,7 +1043,7 @@
 </section>
 
 <!-- ===================== CONTACT ===================== -->
-<section id="contact" class="contact">
+<section id="contact" class="page contact" data-title="Contact">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Contact</span>
@@ -842,7 +1054,6 @@
       <a class="contact-card reveal" href="mailto:jshi432@gatech.edu"><span class="ci"><svg><use href="#i-mail"/></svg></span><span><span class="k">Georgia Tech Email</span><span class="v">jshi432@gatech.edu</span></span></a>
       <a class="contact-card reveal" href="mailto:jiayushi1119@163.com"><span class="ci"><svg><use href="#i-mail"/></svg></span><span><span class="k">Personal Email</span><span class="v">jiayushi1119@163.com</span></span></a>
       <a class="contact-card reveal" href="https://www.linkedin.com/in/jiayu-shi-95ab9b432" target="_blank" rel="noopener"><span class="ci"><svg><use href="#i-linkedin"/></svg></span><span><span class="k">LinkedIn</span><span class="v">in/jiayu-shi-95ab9b432</span></span></a>
-      <!-- TODO: replace with your own GitHub profile URL -->
       <a class="contact-card reveal" href="https://github.com/JiayuShi1119" target="_blank" rel="noopener"><span class="ci"><svg><use href="#i-github"/></svg></span><span><span class="k">GitHub</span><span class="v">github.com/JiayuShi1119</span></span></a>
       <a class="contact-card reveal" href="tel:+14708384785"><span class="ci"><svg><use href="#i-phone"/></svg></span><span><span class="k">Phone</span><span class="v">+1 (470) 838-4785</span></span></a>
       <div class="contact-card reveal"><span class="ci"><svg><use href="#i-pin"/></svg></span><span><span class="k">Location</span><span class="v">Atlanta, GA &middot; Georgia Tech</span></span></div>
@@ -866,7 +1077,7 @@
       <a href="mailto:jshi432@gatech.edu" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
       <a href="https://www.linkedin.com/in/jiayu-shi-95ab9b432" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
       <a href="https://github.com/JiayuShi1119" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a>
-      <a href="#home" aria-label="Back to top"><svg><use href="#i-up"/></svg></a>
+      <a href="#top" aria-label="Back to top"><svg><use href="#i-up"/></svg></a>
     </div>
   </div>
 </footer>
@@ -879,6 +1090,6 @@
   <p></p>
 </div>
 
-<script src="js/main.js?v=2" defer></script>
+<script src="js/main.js?v=3" defer></script>
 </body>
 </html>

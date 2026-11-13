@@ -18,24 +18,57 @@
   links.addEventListener('click', function (e) { if (e.target.closest('a')) closeMenu(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { closeMenu(); closeLightbox(); } });
 
-  // ---- Active section highlight ----
+  // ---- Page router: show one page at a time, driven by the URL hash ----
+  // Each top-level page has class "page"; project detail pages set data-parent="projects"
+  // so the Projects tab stays highlighted. Back/forward buttons and deep links work.
+  var pages = Array.prototype.slice.call(document.querySelectorAll('.page'));
   var navAnchors = Array.prototype.slice.call(links.querySelectorAll('a'));
-  var sections = navAnchors.map(function (a) { return document.querySelector(a.getAttribute('href')); });
-  function setActive() {
-    var y = window.scrollY + window.innerHeight * 0.3;
-    var current = 0;
-    sections.forEach(function (sec, i) { if (sec && sec.offsetTop <= y) current = i; });
-    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) current = sections.length - 1;
-    navAnchors.forEach(function (a, i) { a.classList.toggle('active', i === current); });
-    toTop.classList.toggle('show', window.scrollY > 700);
+  var home = document.getElementById('home');
+  var baseTitle = document.title;
+  var current = null;
+
+  function pageFor(el) {
+    if (!el) return null;
+    return el.classList.contains('page') ? el : el.closest('.page');
   }
+
+  function route() {
+    var id = decodeURIComponent(location.hash.slice(1));
+    var el = id ? document.getElementById(id) : null;
+    var page = pageFor(el);
+    if (!page) {
+      if (el && current) return;          // e.g. #top or #main: keep the current page
+      page = home;
+    }
+    if (page !== current) {
+      pages.forEach(function (p) { p.classList.toggle('active', p === page); });
+      current = page;
+      var key = page.getAttribute('data-parent') || page.id;
+      navAnchors.forEach(function (a) {
+        var on = a.getAttribute('href') === '#' + key;
+        a.classList.toggle('active', on);
+        if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+      });
+      document.title = page === home ? baseTitle : page.getAttribute('data-title') + ' | Jiayu (Joey) Shi';
+      // Pause any video on pages that are now hidden
+      document.querySelectorAll('video').forEach(function (v) { if (!page.contains(v)) v.pause(); });
+    }
+    if (el && el !== page) el.scrollIntoView();
+    else window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+  window.addEventListener('hashchange', route);
+  route();
+
+  // ---- Back-to-top button ----
   var toTop = document.querySelector('.to-top');
   toTop.addEventListener('click', function () { window.scrollTo({ top: 0 }); });
   var ticking = false;
   window.addEventListener('scroll', function () {
-    if (!ticking) { requestAnimationFrame(function () { setActive(); ticking = false; }); ticking = true; }
+    if (!ticking) {
+      requestAnimationFrame(function () { toTop.classList.toggle('show', window.scrollY > 700); ticking = false; });
+      ticking = true;
+    }
   }, { passive: true });
-  setActive();
 
   // ---- Reveal on scroll ----
   var reveals = document.querySelectorAll('.reveal');
@@ -48,16 +81,16 @@
     reveals.forEach(function (el) { el.classList.add('in'); });
   }
 
-  // ---- Lightbox for photos ----
+  // ---- Lightbox for photos (not for images inside links, such as project summary cards) ----
   var lb = document.querySelector('.lightbox');
   var lbImg = lb.querySelector('img');
   var lbCap = lb.querySelector('p');
   function closeLightbox() { lb.classList.remove('open'); lbImg.removeAttribute('src'); }
   document.addEventListener('click', function (e) {
-    var img = e.target.closest('figure.media img, .project-card .thumb img');
-    if (!img) return;
-    var fig = img.closest('figure') || img.closest('.project-card');
-    var cap = fig && (fig.querySelector('figcaption') || fig.querySelector('.cap'));
+    var img = e.target.closest('figure.media img');
+    if (!img || img.closest('a')) return;
+    var fig = img.closest('figure');
+    var cap = fig && fig.querySelector('figcaption');
     lbImg.src = img.currentSrc || img.src;
     lbImg.alt = img.alt;
     lbCap.textContent = cap ? cap.textContent.replace(/\s+/g, ' ').trim() : img.alt;
