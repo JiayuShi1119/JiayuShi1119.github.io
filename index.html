@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/portrait-home.jpg">
-  <link rel="stylesheet" href="assets/css/style.css?v=7">
+  <link rel="stylesheet" href="assets/css/style.css?v=8">
   <script>document.documentElement.classList.remove('no-js');</script>
 </head>
 <body>
@@ -381,40 +381,12 @@
 
       <a class="project-card reveal" href="#project-pcb">
         <div class="thumb">
-          <svg class="diagram" viewBox="0 0 400 250" role="img" aria-labelledby="pcb-title-c">
-            <title id="pcb-title-c">Block diagram of the daisy-chained RP2040 sensor board</title>
-            <defs><pattern id="g-c" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#18395c" stroke-width="1"/></pattern></defs>
-            <rect width="400" height="250" fill="url(#g-c)"/>
-            <g font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">
-              <!-- power path -->
-              <rect x="14" y="14" width="74" height="30" rx="5" fill="#0f2f52" stroke="#5f7fa3"/><text x="51" y="33" fill="#dbe4ee">USB 5V</text>
-              <rect x="100" y="14" width="80" height="30" rx="5" fill="#0f2f52" stroke="#5f7fa3"/><text x="140" y="33" fill="#dbe4ee">SPI 5V</text>
-              <rect x="196" y="14" width="86" height="30" rx="5" fill="#0f2f52" stroke="#b3a369"/><text x="239" y="33" fill="#b3a369">Power OR</text>
-              <rect x="298" y="14" width="88" height="30" rx="5" fill="#0f2f52" stroke="#b3a369"/><text x="342" y="33" fill="#b3a369">3.3V LDO</text>
-              <path d="M88 29h8M180 29h12M282 29h12" stroke="#b3a369" stroke-width="2"/>
-              <path d="M342 44v28H265" stroke="#b3a369" stroke-width="1.5" stroke-dasharray="4 3" fill="none"/>
-              <!-- data path -->
-              <rect x="14" y="88" width="70" height="44" rx="5" fill="#0f2f52" stroke="#5f7fa3"/><text x="49" y="108" fill="#dbe4ee">SPI</text><text x="49" y="123" fill="#8fa2b8" font-size="10">IN</text>
-              <rect x="135" y="78" width="130" height="64" rx="7" fill="#b3a369"/><text x="200" y="106" fill="#001a33" font-weight="700" font-size="14">RP2040</text><text x="200" y="124" fill="#001a33" font-size="10">+ 2 MB Flash</text>
-              <rect x="316" y="88" width="70" height="44" rx="5" fill="#0f2f52" stroke="#5f7fa3"/><text x="351" y="108" fill="#dbe4ee">SPI</text><text x="351" y="123" fill="#8fa2b8" font-size="10">OUT</text>
-              <path d="M84 110h47M265 110h47" stroke="#dbe4ee" stroke-width="2" marker-end="url(#a-c)"/>
-              <defs><marker id="a-c" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z" fill="#dbe4ee"/></marker></defs>
-              <!-- I2C bus -->
-              <path d="M200 142v28M40 170h320" stroke="#b3a369" stroke-width="2.5"/>
-              <text x="372" y="166" fill="#b3a369" font-size="10" text-anchor="end">I&#178;C</text>
-              <g fill="#0f2f52" stroke="#5f7fa3">
-                <rect x="14" y="190" width="58" height="40" rx="5"/><rect x="78" y="190" width="58" height="40" rx="5"/><rect x="142" y="190" width="58" height="40" rx="5"/>
-                <rect x="206" y="190" width="58" height="40" rx="5"/><rect x="270" y="190" width="58" height="40" rx="5"/><rect x="334" y="190" width="52" height="40" rx="5"/>
-              </g>
-              <path d="M43 170v20M107 170v20M171 170v20M235 170v20M299 170v20M360 170v20" stroke="#b3a369" stroke-width="1.5"/>
-              <g fill="#dbe4ee"><text x="43" y="215">IMU</text><text x="107" y="215">Temp</text><text x="171" y="215">Hall</text><text x="235" y="215">GPIO</text><text x="299" y="215">Color</text><text x="360" y="215">LED</text></g>
-            </g>
-          </svg>
+          <img src="assets/img/pcb-3d.jpg" loading="lazy" width="1600" height="990" alt="3D render of the green sensor circuit board with eight LEDs, a microcontroller, connectors, and a blue DIP switch">
         </div>
         <div class="body">
           <div class="sub">RoboJackets Robot Soccer &middot; Fall 2026 &ndash; Present</div>
           <h3>Multi-Sensor Circuit Board for Soccer Robots</h3>
-          <p class="summary">A credit-card-sized board that lets our robots sense motion, temperature, magnets, and color, and links to other boards in a chain.</p>
+          <p class="summary">A compact board that lets our robots sense motion, temperature, magnets, and color, and links to other boards in a chain. Layout complete, every connection routed.</p>
           <div class="pc-stat"><b>6</b>sensors and chips on one 4-layer board</div>
           <span class="more">Read the full story <svg><use href="#i-arrow"/></svg></span>
         </div>
@@ -626,25 +598,36 @@
         <div class="ppo">
           <div class="in-short">
             <b>In short</b>
-            <p>I designed a small circuit board that gives our soccer robots six kinds of sensing and can be chained to other boards with a single cable.</p>
+            <p>I designed a small circuit board that gives our soccer robots six kinds of sensing and can be chained to other boards with a single cable. The layout is now essentially finished: all 106 connections are routed.</p>
           </div>
           <h3><span class="num">01</span>The Problem</h3>
           <p>Robot soccer players need to know how they are moving, which way they face, and what is around them, all without a tangle of wires. The team needed a compact, reliable sensor board that could link to other boards in a chain and safely take power from either a USB cable or the board before it.</p>
           <h3><span class="num">02</span>The Process</h3>
           <p>I designed the board in KiCad around a small RP2040 microcontroller and connected six parts: a motion sensor, a temperature sensor, a magnetic sensor, a switch reader, a color sensor, and a driver for eight RGB lights. A small power-selection circuit picks USB or chain power without letting the two fight each other. I used four copper layers, with the two inner layers for power and ground, to keep signals clean on a board about the size of a credit card (3.15&nbsp;&times;&nbsp;1.97&nbsp;in).</p>
           <h3><span class="num">03</span>The Outcome</h3>
-          <p>The design is complete, has passed every design-rule check, and is now being manufactured. Next, I will write the startup code and test each sensor before the competition season.</p>
+          <p>The layout is essentially finished (Figs.&nbsp;8&ndash;9). All 106 nets are routed with none left unconnected, using about 800 track segments and 269 vias to move signals between the four layers. Next, I will do a final design review, send the board out for manufacturing, then write the startup code and test each sensor before the competition season.</p>
           <details class="tech">
             <summary>Technical details for engineers</summary>
             <ul>
               <li>RP2040 with external QSPI flash; SPI in/out for daisy-chaining, with a growing data packet passed to the next board.</li>
               <li>I&sup2;C devices: ICM-42605 IMU, LM75 temperature sensor, TMAG5273 Hall-effect sensor, TCA9534 GPIO expander with DIP switch, VEML3328 color sensor, IS31FL3254 LED driver.</li>
               <li>Power: LM66100 ideal-diode OR-ing between USB and chain 5&nbsp;V, followed by an AP2112K 3.3&nbsp;V LDO.</li>
-              <li>4-layer stack-up with internal 3.3&nbsp;V and GND planes; tight QFN fan-out; 80&nbsp;&times;&nbsp;50&nbsp;mm outline.</li>
+              <li>4-layer stack-up (F.Cu / In1.Cu / In2.Cu / B.Cu) with internal 3.3&nbsp;V and GND planes; tight QFN fan-out; 80&nbsp;&times;&nbsp;50&nbsp;mm outline.</li>
+              <li>Board statistics: 424 pads, 106 nets, 805 track segments, 269 vias, 0 unrouted.</li>
             </ul>
           </details>
         </div>
         <div class="feature-media">
+          <figure class="media">
+            <div class="frame"><span class="tag">Original &middot; 3D Render</span><img class="contain" src="assets/img/pcb-3d.jpg" loading="lazy" width="1600" height="990" alt="KiCad 3D render of the sensor board: eight LEDs along the top, the RP2040 microcontroller in the center, side connectors, push buttons, a USB port, and a blue 8-position DIP switch"></div>
+            <figcaption><span class="fig-no">FIG. 8</span>3D preview of the finished layout: eight status LEDs across the top, the microcontroller in the middle, chain connectors on each side, and an 8-position DIP switch along the bottom.
+              <span class="source">KiCad 3D render by Jiayu Shi, 2026</span></figcaption>
+          </figure>
+          <figure class="media">
+            <div class="frame"><span class="tag">Original &middot; Layout</span><img class="contain" src="assets/img/pcb-layout.jpg" loading="lazy" width="1498" height="940" alt="KiCad PCB editor view of the board showing red top-layer copper, green traces, and vias around the central microcontroller"></div>
+            <figcaption><span class="fig-no">FIG. 9</span>The routed layout in KiCad (top layer shown): green lines are copper traces and small circles are vias that carry signals between layers.
+              <span class="source">KiCad screenshot by Jiayu Shi, 2026</span></figcaption>
+          </figure>
           <figure class="media">
             <div class="frame">
           <svg class="diagram" viewBox="0 0 400 250" role="img" aria-labelledby="pcb-title">
@@ -677,7 +660,7 @@
             </g>
           </svg>
             </div>
-            <figcaption><span class="fig-no">FIG. 8</span>Block diagram: power comes in at the top, data flows left to right, and six sensors share one bus along the bottom.
+            <figcaption><span class="fig-no">FIG. 10</span>Block diagram: power comes in at the top, data flows left to right, and six sensors share one bus along the bottom.
               <span class="source">Diagram created by Jiayu Shi from the RoboJackets onboarding specification</span></figcaption>
           </figure>
         </div>
@@ -745,7 +728,7 @@
             </g>
           </svg>
             </div>
-            <figcaption><span class="fig-no">FIG. 9</span>A short example of the low-level style used throughout the project: four instructions that switch on one part of the chip.
+            <figcaption><span class="fig-no">FIG. 11</span>A short example of the low-level style used throughout the project: four instructions that switch on one part of the chip.
               <span class="source">Illustrative excerpt written by Jiayu Shi</span></figcaption>
           </figure>
         </div>
@@ -794,12 +777,12 @@
         <div class="feature-media">
           <figure class="media">
             <div class="frame"><span class="tag">Original</span><img src="assets/img/logic-2.jpg" loading="lazy" width="1400" height="1049" alt="Breadboard with logic chips, red indicator LEDs, and many jumper wires"></div>
-            <figcaption><span class="fig-no">FIG. 10</span>A sequential logic prototype with LED outputs under test.
+            <figcaption><span class="fig-no">FIG. 12</span>A sequential logic prototype with LED outputs under test.
               <span class="source">Photo by Jiayu Shi</span></figcaption>
           </figure>
           <figure class="media">
             <div class="frame"><span class="tag">Original</span><img src="assets/img/logic-3.jpg" loading="lazy" width="1187" height="821" alt="Breadboard with an 8-position switch, logic chips, and LEDs, labeled with input names"></div>
-            <figcaption><span class="fig-no">FIG. 11</span>A combinational circuit with switch inputs and labeled test points.
+            <figcaption><span class="fig-no">FIG. 13</span>A combinational circuit with switch inputs and labeled test points.
               <span class="source">Photo by Jiayu Shi</span></figcaption>
           </figure>
         </div>
@@ -896,7 +879,7 @@
           </div>
           <figure class="media">
             <div class="frame"><img src="assets/img/student-council.jpg" loading="lazy" width="1400" height="1050" alt="Large group photo of the SCUPI Student Council seated on a staircase"></div>
-            <figcaption><span class="fig-no">FIG. 12</span>The SCUPI Student Council team I led during the 2025&ndash;2026 academic year.
+            <figcaption><span class="fig-no">FIG. 14</span>The SCUPI Student Council team I led during the 2025&ndash;2026 academic year.
               <span class="source">SCUPI Student Council, 2026</span></figcaption>
           </figure>
         </div>
@@ -916,12 +899,12 @@
         <div class="photos">
           <figure class="media">
             <div class="frame"><img src="assets/img/qinghai-team.jpg" loading="lazy" width="1400" height="1050" alt="Team members holding a banner in front of the Przewalski's gazelle education base"></div>
-            <figcaption><span class="fig-no">FIG. 13</span>Our team at the Przewalski&rsquo;s gazelle conservation and education base.
+            <figcaption><span class="fig-no">FIG. 15</span>Our team at the Przewalski&rsquo;s gazelle conservation and education base.
               <span class="source">Sichuan University practice team, 2025</span></figcaption>
           </figure>
           <figure class="media">
             <div class="frame"><img src="assets/img/qinghai-bus.jpg" loading="lazy" width="1400" height="1052" alt="Four team members smiling together on a bus during the field trip"></div>
-            <figcaption><span class="fig-no">FIG. 14</span>On the road between field sites in Gangcha County.
+            <figcaption><span class="fig-no">FIG. 16</span>On the road between field sites in Gangcha County.
               <span class="source">Personal photo, 2025</span></figcaption>
           </figure>
         </div>
@@ -941,12 +924,12 @@
         <div class="photos">
           <figure class="media">
             <div class="frame"><img src="assets/img/sif-1.jpg" loading="lazy" width="1400" height="1050" alt="Jiayu Shi in a suit speaking into a microphone in front of a screen displaying SIF 2026 Student Innovation Forum"></div>
-            <figcaption><span class="fig-no">FIG. 15</span>Addressing delegates at the 2026 Student Innovation Forum.
+            <figcaption><span class="fig-no">FIG. 17</span>Addressing delegates at the 2026 Student Innovation Forum.
               <span class="source">SCUPI Student Council, 2026</span></figcaption>
           </figure>
           <figure class="media">
             <div class="frame"><img src="assets/img/sif-2.jpg" loading="lazy" width="1280" height="836" alt="Group photo of forum delegates and faculty under a 2026 Student Innovation Forum banner"></div>
-            <figcaption><span class="fig-no">FIG. 16</span>Delegates and faculty from participating institutes, April 2026.
+            <figcaption><span class="fig-no">FIG. 18</span>Delegates and faculty from participating institutes, April 2026.
               <span class="source">SCUPI Student Council, 2026</span></figcaption>
           </figure>
         </div>
@@ -974,15 +957,15 @@
         <div class="mosaic">
           <figure class="media m-main">
             <div class="frame"><img src="assets/img/guitar-2.jpg" loading="lazy" width="1600" height="1067" alt="Jiayu Shi and a friend performing acoustic guitar on stage with microphones and a colorful backdrop"></div>
-            <figcaption><span class="fig-no">FIG. 17</span>Performing an acoustic duet on stage.</figcaption>
+            <figcaption><span class="fig-no">FIG. 19</span>Performing an acoustic duet on stage.</figcaption>
           </figure>
           <figure class="media">
             <div class="frame"><img src="assets/img/guitar-3.jpg" loading="lazy" width="1600" height="1067" alt="Two guitarists seated and playing acoustic guitars through a small amplifier"></div>
-            <figcaption><span class="fig-no">FIG. 18</span>Rehearsing through an acoustic amp.</figcaption>
+            <figcaption><span class="fig-no">FIG. 20</span>Rehearsing through an acoustic amp.</figcaption>
           </figure>
           <figure class="media">
             <div class="frame"><img src="assets/img/guitar.jpg" loading="lazy" width="1400" height="1050" alt="Jiayu Shi and a friend holding signed acoustic guitars against a stone wall"></div>
-            <figcaption><span class="fig-no">FIG. 19</span>With a friend and our guitars.</figcaption>
+            <figcaption><span class="fig-no">FIG. 21</span>With a friend and our guitars.</figcaption>
           </figure>
         </div>
       </article>
@@ -996,15 +979,15 @@
         <div class="mosaic mosaic-tall">
           <figure class="media m-tall">
             <div class="frame"><img src="assets/img/cycling-1.jpg" loading="lazy" width="934" height="1400" alt="Cyclist riding a road bike at speed with a motion-blurred green background"></div>
-            <figcaption><span class="fig-no">FIG. 20</span>Holding pace on a training ride.</figcaption>
+            <figcaption><span class="fig-no">FIG. 22</span>Holding pace on a training ride.</figcaption>
           </figure>
           <figure class="media">
             <div class="frame"><img src="assets/img/cycling-3.jpg" loading="lazy" width="1080" height="810" alt="A line of cyclists riding together on a park road"></div>
-            <figcaption><span class="fig-no">FIG. 21</span>Leading a team group ride.</figcaption>
+            <figcaption><span class="fig-no">FIG. 23</span>Leading a team group ride.</figcaption>
           </figure>
           <figure class="media">
             <div class="frame"><img src="assets/img/cycling-4.jpg" loading="lazy" width="1168" height="780" alt="Cyclist in an orange jersey leaning into a corner during a group ride"></div>
-            <figcaption><span class="fig-no">FIG. 22</span>Cornering with the pack.</figcaption>
+            <figcaption><span class="fig-no">FIG. 24</span>Cornering with the pack.</figcaption>
           </figure>
         </div>
       </article>
@@ -1018,23 +1001,23 @@
         <div class="mosaic mosaic-travel">
           <figure class="media t-tall">
             <div class="frame"><img src="assets/img/travel-dianchi.jpg" loading="lazy" width="1200" height="1600" alt="Jiayu Shi reaching up to feed a seagull in flight over Dianchi Lake under a clear blue sky"></div>
-            <figcaption><span class="fig-no">FIG. 23</span>Feeding seagulls at Dianchi Lake, Yunnan.</figcaption>
+            <figcaption><span class="fig-no">FIG. 25</span>Feeding seagulls at Dianchi Lake, Yunnan.</figcaption>
           </figure>
           <figure class="media">
             <div class="frame"><img src="assets/img/travel-qinghai-fields.jpg" loading="lazy" width="1400" height="1050" alt="Jiayu Shi seated on a hillside overlooking green and yellow canola fields and distant mountains"></div>
-            <figcaption><span class="fig-no">FIG. 24</span>Canola fields in Qinghai.</figcaption>
+            <figcaption><span class="fig-no">FIG. 26</span>Canola fields in Qinghai.</figcaption>
           </figure>
           <figure class="media">
             <div class="frame"><img src="assets/img/travel-qinghai-valley.jpg" loading="lazy" width="1400" height="1050" alt="Jiayu Shi standing in a rocky river valley facing tall green mountains"></div>
-            <figcaption><span class="fig-no">FIG. 25</span>A mountain valley in Qinghai.</figcaption>
+            <figcaption><span class="fig-no">FIG. 27</span>A mountain valley in Qinghai.</figcaption>
           </figure>
           <figure class="media">
             <div class="frame"><img src="assets/img/travel-wawu.jpg" loading="lazy" width="1600" height="1200" alt="Jiayu Shi and a friend raising paddles in a red kayak on a mountain lake"></div>
-            <figcaption><span class="fig-no">FIG. 26</span>Kayaking at Mount Wawu, Sichuan.</figcaption>
+            <figcaption><span class="fig-no">FIG. 28</span>Kayaking at Mount Wawu, Sichuan.</figcaption>
           </figure>
           <figure class="media">
             <div class="frame"><img src="assets/img/travel-pingtan.jpg" loading="lazy" width="1440" height="1080" alt="Silhouettes of friends raising their arms on a beach at dusk"></div>
-            <figcaption><span class="fig-no">FIG. 27</span>Sunset with friends on Pingtan Island.</figcaption>
+            <figcaption><span class="fig-no">FIG. 29</span>Sunset with friends on Pingtan Island.</figcaption>
           </figure>
         </div>
       </article>
